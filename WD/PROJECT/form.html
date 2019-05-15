@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Diaries</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Laxhit"/>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style4.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+	<script src='scripts/jquery-3.2.1.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src='scripts/bootstrap.min.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div class="container" style="background-color: black">
+		<div class="row">
+			<div class="col-md-3 bannerbg"> 
+				<img src="image/1.png" class="img-fluid" alt="MSI LOGO"/>  
+			</div>
+			<div class="col-md-9 bannerbg">
+				<div class="effect">	
+					<img src="image/bn.jpg" class="img-fluid img-thumbnail" alt="Banner MSI"  width="9000" />  
+						<div class="overlay">
+    						<div class="text">Welcome to my page</div>
+  						</div>
+				</div>	
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="menu">
+					<ul class="nav">
+						<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="traveldiary.html">Travel Diary</a></li>
+						<li class="nav-item"><a class="nav-link" href="photogallery.html">Photo Gallery</a></li>
+						<li class="nav-item"><a class="nav-link" href="form.html">Form</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+					</ul>
+					
+				</div>
+			</div>
+	</div>
+<br>
+	<div class="row" >
+		<div class="col-md-12" style="background-color: blue; float: right;" align="center">
+			<p>If you have your own travel diary,and wanna post it. Then, you are welcome here to post it out</p>
+		</div>
+	</div>
+
+
+	<table boarder="0" cellpadding="10px">
+
+<form name="myForm"  onsubmit="return validateForm()" method="post">
+<TR><TD>Name:</TD><TD> <input type="text" name="fname" required></TD></TR>
+
+
+<TR><TD>Password:</TD>
+<TD><input type="password" name="pword" required></TD></TR>
+
+<TR><TD>Confirm Password:</TD>
+<TD><input type="password" name="cword" required></TD></TR>
+
+<TR><TD>Email:</TD>
+<TD><input type="text" name="email" required></TD></TR>
+
+
+<TR><TD><label>Date</label></TD>
+<TD><input type="date"></TD></TR>
+<TR><TD colspan="2" align="center"><input type="submit" value="submit"></TD></TR>
+</form>
+</table>
+
+<div class="footer">
+	<hr color="white">
+	<p align="center"><b>&copy;2019 www.morningstar.com.np THE TRAVEL DIARY &reg; All right reserve</b></p>
+	<hr color="white">
+</div>	
+
+<script>
+function validateForm(myForm) {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+
+    var y = document.forms["myForm"]["pword"].value;
+    if (y == "") {
+        alert("Password must be filled out");
+        return false;    
+    }
+   
+    var z = document.forms["myForm"]["cword"].value;
+    if (z != y) {
+        alert("Password not matched");
+        return false;    
+    }
+    var a = document.forms["myForm"]["email"].value;
+    if (a != "@" || a !=".") {
+        alert("Character symbol is missing");
+        return false;    
+    }
+
+    var b = document.forms["myForm"]["action_page.php"].value;
+    if (x =="" || y =="" || z =="" || a ==""){
+    	alert("Form not submitted");
+    	return false;
+    }
+    else{
+    	alert("Form submitted");
+    }
+
+}
+</script>
+
+
+</body>
+</html>
